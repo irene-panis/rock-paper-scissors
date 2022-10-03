@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors</title>
+</head>
+<body>
+
+  <script>
+
+    function getComputerChoice() {
+      const choices = ['Rock', 'Paper', 'Scissors'];
+      return choices[Math.floor(Math.random()*choices.length)];
+    }
+
+    function playRound(playerSelection, computerSelection) {
+      playerSelection = playerSelection.toUpperCase();
+      computerSelection = computerSelection.toUpperCase();
+
+      if (playerSelection === computerSelection) {
+        return `Draw! You both chose ${playerSelection}.`;
+      }
+
+      switch(playerSelection) {
+        case "ROCK":
+          if (computerSelection === "SCISSORS") {
+            return 'You win! ROCK beats SCISSORS.';
+          } else {
+            return 'You lose! PAPER beats ROCK.';
+          }
+        case "PAPER":
+          if (computerSelection === "ROCK") {
+            return 'You win! PAPER beats ROCK.';
+          } else {
+            return 'You lose! SCISSORS beats PAPER.';
+          }
+        case "SCISSORS":
+          if (computerSelection === "PAPER") {
+            return 'You win! SCISSORS beats PAPER.';
+          } else {
+            return 'You lose! ROCK beats SCISSORS.';
+          }
+        default:
+          return 'Please enter a valid choice!';
+      }
+    }
+
+    function game() {
+      let playerScore = 0;
+      let cpuScore = 0;
+      
+      for (let i = 0; i < 5; i++) {
+        let userChoice = prompt("Choose between ROCK, PAPER, or SCISSORS.");
+        let roundResult = playRound(userChoice, getComputerChoice());
+        console.log(roundResult);
+        
+        if (roundResult.includes('You win!')) {
+          playerScore++;
+        } else if (roundResult.includes('You lose!')) {
+          cpuScore++;
+        }
+      }
+
+      if (playerScore > cpuScore) {
+        console.log(`YOU WIN! Your score: ${playerScore}. CPU score: ${cpuScore}.`)
+      } else if (playerScore < cpuScore) {
+        console.log(`YOU LOSE! Your score: ${playerScore}. CPU score: ${cpuScore}.`)
+      } else {
+        console.log(`DRAW! Your score: ${playerScore}. CPU score: ${cpuScore}.`)
+      }
+    }
+
+    game();
+  </script>
+
+</body>
+</html>
