@@ -2,10 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
   <title>Rock Paper Scissors</title>
 </head>
 <body>
+  
+  <div class="everything">
 
+    <div class="opening">
+      <div id="header">Rock Paper Scissors</div>
+      <div id="subheader">First to five wins.</div>
+    </div>
+
+    <div class="choices">
+
+      <div class="question">What will you choose?</div>    
+      <div class="buttons">
+        <div class="polaroid">
+          <img src="img/rock.jpg">
+          <button class="btn">Rock</button>
+        </div>
+        <div class="polaroid">
+          <img src="img/paper.jpg">
+          <button class="btn">Paper</button>
+        </div>
+        <div class="polaroid">
+          <img src="img/scissors.jpg">
+          <button class="btn">Scissors</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="keeping-track">
+      <div id="score-text">Score:</div>
+      <div id="score">0 - 0</div>
+    </div>
+  </div>
   <script>
 
     function getComputerChoice() {
@@ -69,8 +102,6 @@
         console.log(`DRAW! Your score: ${playerScore}. CPU score: ${cpuScore}.`)
       }
     }
-
-    game();
   </script>
 
 </body>
