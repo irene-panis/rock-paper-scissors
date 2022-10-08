@@ -64,6 +64,9 @@ function checkWinner() {
 }
 
 function endGame() {
+  const endResult = document.createElement('div');
+  endResult.style.textAlign = "center";
+  endResult.style.fontFamily = "Arial";
   if (checkWinner() == 1) {
     endResult.textContent = "YOU WIN!";
     document.body.appendChild(endResult);
@@ -75,8 +78,6 @@ function endGame() {
 
 const buttons = document.querySelectorAll('.btn');
 const score = document.querySelector('#score');
-const keepingTrack = document.querySelector('.keeping-track');
-const endResult = document.createElement('div');
 
 buttons.forEach((button) => {
   button.addEventListener('click', () => {
