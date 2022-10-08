@@ -68,6 +68,7 @@ retry.addEventListener('click', () => {
   reset();
   retry.innerHTML = "Reset";
   document.getElementById("question").innerHTML = "What will you choose?";
+  enableButtons();
 })
 
 function endGame() {
