@@ -1,5 +1,4 @@
 * {
-  background-color: #f5d7bc;
   color: #262730;
   box-sizing: border-box;
   margin: 0;
@@ -20,12 +19,13 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: #f5d7bc;
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   flex-grow: 1;
 }
@@ -61,8 +61,10 @@ body {
   flex: none;
 }
 
-.question {
+#question {
   font-family: Arial;
+  text-transform: uppercase;
+  font-size: 30px;
 }
 
 .polaroid {
@@ -78,12 +80,13 @@ body {
 .youChose {
   transform: scale(1.2);
   background-color: rgb(245, 186, 170);
+  transition: all 2s;
 }
 
 .cpuChose {
   transform: scale(1.2);
   background-color: rgb(247, 206, 141);
-  transition-delay: 4s;
+  transition: all 2s;
 }
 
 img {
@@ -95,7 +98,7 @@ img {
   height: auto;
 }
 
-button {
+.btn {
   background: none;
   border: none;
   padding: 0;
@@ -104,6 +107,18 @@ button {
   text-transform: uppercase;
   cursor: pointer;
 }
+
+.log {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+#retry {
+  width: 150px;
+}
+
 
 .keeping-track {
   display: flex;
