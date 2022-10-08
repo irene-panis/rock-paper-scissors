@@ -56,11 +56,9 @@ body {
 .buttons {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
-  height: 100%;
   flex: none;
-  border: 1px solid red;
 }
 
 .question {
@@ -72,9 +70,9 @@ body {
   flex-direction: column;
   justify-content: space-around;
   background-color: snow;
-  height: 100%;
-  width: 30%;
+  width: 23%;
   flex: initial;
+  transition: all 2s;
 }
 
 .youChose {
@@ -85,11 +83,12 @@ body {
 .cpuChose {
   transform: scale(1.2);
   background-color: rgb(247, 206, 141);
+  transition-delay: 4s;
 }
 
 img {
   display: block;
-  margin-top: 3%;
+  margin-top: 4%;
   margin-left: auto;
   margin-right: auto;
   width: 90%;

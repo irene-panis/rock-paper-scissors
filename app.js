@@ -6,8 +6,7 @@ function getComputerChoice() {
   return choices[Math.floor(Math.random()*choices.length)];
   }
 
-function playRound(playerSelection) {
-  let computerSelection = getComputerChoice();
+function playRound(playerSelection, computerSelection) {
   playerSelection = playerSelection.toUpperCase();
 
   if (playerSelection === computerSelection) {
@@ -81,8 +80,31 @@ const score = document.querySelector('#score');
 
 buttons.forEach((button) => {
   button.addEventListener('click', () => {
-    playRound(button.id);
-    score.textContent = playerScore + ' - ' + cpuScore;
+    let computerSelection = getComputerChoice();
+    playRound(button.id, computerSelection);
+    makeActiveYou(button);
+    makeActiveCpu(computerSelection);
+    updateScore();
     if (checkWinner()) endGame();
   });
 });
+
+function updateScore() {
+  score.textContent = playerScore + ' - ' + cpuScore;
+}
+
+function makeActiveYou(identifier) {
+  let idFormatted = '#' + identifier.parentNode.id;
+  const choice = document.querySelector(idFormatted);
+  choice.classList.add('youChose');
+}
+
+function makeActiveCpu(identifier) {
+  let choiceFormatted = formatCpuChoice(identifier);
+  const choice = document.querySelector(choiceFormatted);
+  choice.classList.add('cpuChose');
+}
+
+function formatCpuChoice(str) {
+  return "#option" + str.charAt(0) + str.slice(1).toLowerCase();
+}
