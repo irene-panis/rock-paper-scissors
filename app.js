@@ -66,10 +66,10 @@ function checkWinner() {
 function endGame() {
   if (checkWinner() == 1) {
     endResult.textContent = "YOU WIN!";
-    keepingTrack.appendChild(endResult);
+    document.body.appendChild(endResult);
   } else if (checkWinner() == -1) {
     endResult.textContent = "YOU LOSE!";
-    keepingTrack.appendChild(endResult);
+    document.body.appendChild(endResult);
   }
 }
 
