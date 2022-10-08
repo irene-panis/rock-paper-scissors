@@ -86,6 +86,8 @@ button {
 }
 
 .keeping-track {
+  display: flex;
+  flex-direction: column;
   font-family: "Arial";
   text-transform: uppercase;
   text-align: center;
