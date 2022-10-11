@@ -12,3 +12,7 @@ Thus, my website includes some attempts at animated elements, a "reset"/"try aga
 unwanted multiple inputs, and more.<br/>
 
 Credit to nightwolfdezines @ vecteezy.com for the vectors. Fonts were acquired from dafont.com, free for personal use.<br/>
+
+***Time spent: 11 hours 50 minutes***\*</br>
+
+\* from initial commit to first push
