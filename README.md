@@ -1,3 +1,7 @@
+![image](https://user-images.githubusercontent.com/65985104/213064939-1ef8459e-07f9-4421-977b-f23dfea071de.png)
+
+Live: https://irene-panis.github.io/rock-paper-scissors/
+
 This is my first medium-scale project for The Odin Project. It is a simple website in which users play a game of Rock Paper Scissors against a computer. 
 First to five points wins.<br/>
 
